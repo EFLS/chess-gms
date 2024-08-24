@@ -50,6 +50,8 @@ ggplot(gm_federations,
        x = "Federation",
        y = "Number of GM titles")
 
+ggsave("graphs/federations.pdf")
+
 ####################
 #* GM TITLES BY YEAR
 #
@@ -80,6 +82,8 @@ ggplot(data = gm_years,
        x = "Year",
        y = "Number of GM titles awarded")
 
+ggsave("graphs/by-year.pdf")
+
 #** Plot: Number of GM titles by year with highest year highlighted
 # First store year with highest number of titles awarded
 gm_year_highest <- filter(gm_years, count == max(gm_years$count))[[1,1]]
@@ -103,6 +107,8 @@ ggplot(data = gm_years,
        x = "Year",
        y = "Number of GM titles awarded")
 
+ggsave("graphs/by-year-highlight.pdf")
+
 #** Plot total number of GMs
 ggplot(data = gm_years,
        aes(x = TitleYear, y = cumsum(count))) +
@@ -112,5 +118,7 @@ ggplot(data = gm_years,
        subtitle = "Cummulative number of GM titles awarded",
        x = "Year",
        y = "Total number of GM titles")
+
+ggsave("graphs/total-gms.pdf")
 
 
