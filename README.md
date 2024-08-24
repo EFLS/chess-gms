@@ -11,6 +11,8 @@ I created the following charts:
 3. GM titles by year, but with the highest year highlighted.
 4. The total number of GM titles awarded over time.
 
+The charts are available in PDF in `./graphs/`.
+
 I'd like to add an overview of *alive* GMs, or a comparison by gender.
 
 ## Data used
