@@ -57,9 +57,9 @@ ggsave("graphs/federations.pdf")
 #
 # Create a new table with number of titles awarded grouped by year
 gm_years <- gm_list %>%
-  # Drop the current (i.e. highest) year, as it contains incomplete
+  # Drop the current year, as it contains incomplete
   # data and thus is not relevant to compare with other years.
-  filter(TitleYear < max(TitleYear)) %>%
+  filter(TitleYear < format(Sys.Date(), "%Y")) %>%
   group_by(TitleYear) %>%
   summarize(count = n())
 
