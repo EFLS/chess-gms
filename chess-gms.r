@@ -50,7 +50,7 @@ ggplot(gm_federations,
        x = "Federation",
        y = "Number of GM titles")
 
-ggsave("graphs/federations.pdf")
+ggsave("graphs/federations.pdf", width = 10, height = 5)
 
 ####################
 #* GM TITLES BY YEAR
@@ -75,14 +75,14 @@ ggplot(data = gm_years,
                                   by = 5),
                      minor_breaks = NULL) +
   # Add labels to each year with value
-  geom_text(size = 3, vjust = -.3) +
+  geom_text(size = 2.5, vjust = -.3) +
   # Chart labels
   labs(title = "FIDE Chess Grandmaster titles awarded each year",
        subtitle = "Data from Wikipedia",
        x = "Year",
        y = "Number of GM titles awarded")
 
-ggsave("graphs/by-year.pdf")
+ggsave("graphs/by-year.pdf", width = 10, height = 5)
 
 #** Plot: Number of GM titles by year with highest year highlighted
 # First store year with highest number of titles awarded
@@ -107,7 +107,7 @@ ggplot(data = gm_years,
        x = "Year",
        y = "Number of GM titles awarded")
 
-ggsave("graphs/by-year-highlight.pdf")
+ggsave("graphs/by-year-highlight.pdf", width = 10, height = 5)
 
 #** Plot total number of GMs
 ggplot(data = gm_years,
@@ -119,6 +119,6 @@ ggplot(data = gm_years,
        x = "Year",
        y = "Total number of GM titles")
 
-ggsave("graphs/total-gms.pdf")
+ggsave("graphs/total-gms.pdf", width = 10, height = 5)
 
 
