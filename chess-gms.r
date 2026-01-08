@@ -48,7 +48,8 @@ ggplot(gm_federations,
   labs(title = "Chess Grandmaster titles by federation",
        subtitle = "Federation membership at time title was awarded",
        x = "Federation",
-       y = "Number of GM titles")
+       y = "Number of GM titles") +
+  theme_minimal()
 
 ggsave("graphs/federations.pdf", width = 10, height = 5)
 
@@ -80,7 +81,8 @@ ggplot(data = gm_years,
   labs(title = "FIDE Chess Grandmaster titles awarded each year",
        subtitle = "Data from Wikipedia",
        x = "Year",
-       y = "Number of GM titles awarded")
+       y = "Number of GM titles awarded") +
+  theme_minimal()
 
 ggsave("graphs/by-year.pdf", width = 10, height = 5)
 
@@ -105,7 +107,8 @@ ggplot(data = gm_years,
   labs(title = "Chess Grandmaster titles by year",
        subtitle = "Data from Wikipedia",
        x = "Year",
-       y = "Number of GM titles awarded")
+       y = "Number of GM titles awarded") +
+  theme_minimal()
 
 ggsave("graphs/by-year-highlight.pdf", width = 10, height = 5)
 
@@ -117,7 +120,8 @@ ggplot(data = gm_years,
   labs(title = "Chess Grandmaster titles",
        subtitle = "Cummulative number of GM titles awarded",
        x = "Year",
-       y = "Total number of GM titles")
+       y = "Total number of GM titles") +
+  theme_minimal()
 
 ggsave("graphs/total-gms.pdf", width = 10, height = 5)
 
