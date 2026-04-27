@@ -1,6 +1,5 @@
 # Chess Grandmasters
 # EFLS
-# Updated: 2026 04 27
 #
 # An analysis of all Chess Grandmaster titles as listed on Wikipedia
 
